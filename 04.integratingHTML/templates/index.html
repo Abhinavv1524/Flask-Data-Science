@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    {{ bootstrap.load_css() }}
+  </head>
+  <body>
+    <h1>Welcome user</h1>
+    <div class="container">
+      <form action="/submit" method="POST">
+        <div class="mb-3">
+          <label for="science" class="form-label">Science :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="science"
+            name="science"
+            value="0"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Maths" class="form-label">Maths :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Maths"
+            name="Maths"
+            value="0"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="C++" class="form-label">C++ :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="C++"
+            name="C++"
+            value="0"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Machine-Learning" class="form-label"
+            >Machine-Learning :</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="Machine-Learning"
+            name="Machine-Learning"
+            value="0"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

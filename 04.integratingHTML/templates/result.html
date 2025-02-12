@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Result</title>
+    {{ bootstrap.load_css() }}
+  </head>
+  <body>
+    <h1>The Total Percentage is {{result}} %</h1>
+    {% if result >= 50 %}
+    <h3 class="text-success">🎉 Congratulations! You Passed! ✅</h3>
+    {% else %}
+    <h3 class="text-danger">❌ Sorry! You Failed!.</h3>
+    {%endif%}
+  </body>
+</html>
