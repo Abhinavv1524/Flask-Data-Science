@@ -1,2 +1,51 @@
+# Ignore Python virtual environment
+venv/
+myenv/
+env/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment variables and config files
 .env
-env
+*.env
+config.py
+instance/
+
+# Ignore log files
+logs/
+*.log
+
+# Ignore database files
+db.sqlite3
+*.db
+
+# Ignore compiled code
+*.so
+*.out
+*.o
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore dependencies installed via pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Flask cache and session data
+flask_session/
+
+# Ignore Docker-related files
+*.dockerignore
+docker-compose.override.yml
