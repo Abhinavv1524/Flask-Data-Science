@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    {{ bootstrap.load_css() }}
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='script/script.js') }}"
+    ></script>
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <h1 class="text-center text-primary">Welcome, User! 👋</h1>
+
+      <div class="card shadow-lg p-4 mt-4">
+        <form action="/submit" method="POST">
+          <div class="mb-3">
+            <label for="science" class="form-label">Science:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="science"
+              name="science"
+              value="0"
+              min="0"
+              max="100"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="maths" class="form-label">Maths:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="maths"
+              name="maths"
+              value="0"
+              min="0"
+              max="100"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="cpp" class="form-label">C++:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="cpp"
+              name="cpp"
+              value="0"
+              min="0"
+              max="100"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="machine_learning" class="form-label"
+              >Machine Learning:</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="machine_learning"
+              name="machine_learning"
+              value="0"
+              min="0"
+              max="100"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    {{ bootstrap.load_js() }}
+  </body>
+</html>

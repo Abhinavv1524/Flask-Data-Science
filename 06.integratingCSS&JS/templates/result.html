@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Result</title>
+    {{ bootstrap.load_css() }}
+  </head>
+  <body class="bg-light">
+    <div class="container text-center mt-5">
+      <h1 class="mb-3">
+        The Total Percentage is
+        <span class="text-primary">{{ result.Score }}%</span>
+      </h1>
+
+      {% if result.Score >= 50 %}
+      <h3 class="text-success">🎉 Congratulations! You Passed! ✅</h3>
+      {% else %}
+      <h3 class="text-danger">❌ Sorry! You Failed!</h3>
+      {% endif %}
+
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>Parameter</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for key, value in result.items() %}
+            <tr>
+              <td><strong>{{ key }}</strong></td>
+              <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {{ bootstrap.load_js() }}
+  </body>
+</html>
