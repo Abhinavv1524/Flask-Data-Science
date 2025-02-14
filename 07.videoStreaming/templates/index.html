@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Video Streaming</title>
+    {{ bootstrap.load_css() }}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/style.css') }}"
+    />
+    <style></style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">🎥 LiveStream Pro</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container hero">
+      <h1 class="fw-bold">Welcome to Live Video Streaming</h1>
+      <p>Watch real-time video streaming with high quality</p>
+
+      <div class="video-card col-md-8">
+        <img
+          src="{{ url_for('video') }}"
+          alt="Live Stream"
+          class="img-fluid rounded"
+        />
+      </div>
+
+      <a href="#" class="btn btn-live mt-3">🔴 Watch Live</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <div class="footer mt-5">
+        &copy; 2025 LiveStream Pro | Powered by Flask & Bootstrap
+      </div>
+    </div>
+
+    {{ bootstrap.load_js() }}
+  </body>
+</html>
